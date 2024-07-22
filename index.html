@@ -4,40 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
+    <title>X PPLG 1</title>
     
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-     <script>
-      (function(){
-          emailjs.init("62TUU4V_IMDfBiQtz"); // Ganti dengan Public Key Anda dari EmailJS
-      })();
-      
-      function sendEmail(event) {
-          event.preventDefault();
-          var form = document.getElementById('contactForm');
-          emailjs.sendForm('service_ary788m', 'template_bs57oc4', form)
-              .then(function(response) {
-                 console.log('SUCCESS!', response.status, response.text);
-                 alert("Pesan berhasil dikirim melalui email!");
-              }, function(error) {
-                 console.log('FAILED...', error);
-                 alert("Pesan gagal dikirim melalui email. Silakan coba lagi.");
-              });
-      }
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("62TUU4V_IMDfBiQtz");
+            console.log("EmailJS initialized");
+        })();
+        
+        function sendEmail(event) {
+            event.preventDefault();
+            var form = document.getElementById('contactForm');
+            console.log("Sending email with form data:", new FormData(form));
+            emailjs.sendForm('service_nnla3st', 'template_tfoldhc', form)
+                .then(function(response) {
+                   console.log('SUCCESS!', response.status, response.text);
+                   alert("Pesan berhasil dikirim melalui email!");
+                }, function(error) {
+                   console.log('FAILED...', error);
+                   alert("Pesan gagal dikirim melalui email. Silakan coba lagi.");
+                });
+        }
 
-      function sendWhatsApp(event) {
-          event.preventDefault();
-          const name = document.getElementById('name').value;
-          const email = document.getElementById('email').value;
-          const message = document.getElementById('message').value;
-          const whatsappURL = `https://wa.me/6281292059125?text=Nama:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0APesan:%20${encodeURIComponent(message)}`;
-          window.open(whatsappURL, '_blank');
-      }
-  </script>
+        function sendWhatsApp(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const whatsappURL = `https://wa.me/6281292059125?text=Nama:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0APesan:%20${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -71,6 +69,8 @@
         <!-- end navbar -->
     </header>
 
+
+    <!-- first main 1 -->
     <main>
       <!-- first class description -->
       <section class="container mt-4 mb-4">
@@ -86,8 +86,9 @@
       </section> 
        <!-- end class description  -->
       </main>
+      <!-- end main 1 -->
 
-
+      <!-- first main 2 -->
       <main class="container mt-4">
         <div class="alert alert-dark" role="alert">
           <!-- Carousel -->
@@ -99,10 +100,10 @@
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="img/fotokelas.jfif" class="d-block w-100" alt="Slide 1">
+                  <img src="img/ramekelasfulldiri.jfif" class="d-block w-100" alt="Slide 1">
                 </div>
                 <div class="carousel-item">
-                  <img src="img/fotokelas.jfif" class="d-block w-100" alt="Slide 2">
+                  <img src="img/anakcewe.jfif" class="d-block w-100" alt="Slide 2">
                 </div>
                 <div class="carousel-item">
                   <img src="img/fotokelas.jfif" class="d-block w-100" alt="Slide 3">
@@ -120,27 +121,37 @@
           <!-- End Carousel -->
         </div>
         
-
-        <section class="mb-4">
+        <!-- first alamat -->
+        <section class="mb-4" style="text-decoration: line-through;">
           <p style="text-align: center;"><strong>
             Alamat Sekolah: 
           </strong>
           Jl. Hankam Raya No.89, RT.7/RW.4, Cilangkap, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13870
           </p>
         </section>
-    </main>
+        <!-- end alamat -->
 
+        <hr>
+
+    </main>
+    <!-- end main 2 -->
+    
+  
+      
+
+
+    <!-- fiirst footer -->
     <footer class="bg-dark text-light mt-4 p-4">
       <div class="container">
           <h4>Kontak Kami</h4>
           <form id="contactForm">
               <div class="mb-3">
                   <label for="name" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="name" name="user_name" required>
+                  <input type="text" class="form-control" id="name" name="to_name" required>
               </div>
               <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" name="user_email" required>
+                  <input type="email" class="form-control" id="email" name="to_email" required>
               </div>
               <div class="mb-3">
                   <label for="message" class="form-label">Pesan</label>
@@ -151,6 +162,7 @@
           </form>
       </div>
   </footer>
+  <!-- end footer -->
 
   <!-- first script js and bootstrap js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
