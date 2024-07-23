@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 1200, // Duration of animations
         once: true // Whether animations should only happen once or every time you scroll up/down
     });
-    
+
     // EmailJS initialization
     emailjs.init("62TUU4V_IMDfBiQtz");
     console.log("EmailJS initialized");
@@ -33,4 +33,36 @@ document.addEventListener('DOMContentLoaded', function() {
         const whatsappURL = `https://wa.me/6281292059125?text=Nama:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0APesan:%20${encodeURIComponent(message)}`;
         window.open(whatsappURL, '_blank');
     };
+
+    // Search function
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+
+    function performSearch(event) {
+        event.preventDefault();
+        const query = searchInput.value.toLowerCase().trim();
+
+        // Mapping of keywords to corresponding page URLs
+        const keywordToUrl = {
+            'home': 'src/home.html',
+            'description': 'src/description.html',
+            'class photo': 'src/classphoto.html',
+            'student': '#' // Replace with actual link if available
+        };
+
+        // Check if query matches any keyword
+        if (keywordToUrl.hasOwnProperty(query)) {
+            const url = keywordToUrl[query];
+            if (url !== '#') {
+                window.location.href = url;
+                alert(`Redirecting to ${query} page.`);
+            } else {
+                alert(`No specific page found for ${query}.`);
+            }
+        } else {
+            alert('No matches found.');
+        }
+    }
+
+    searchForm.addEventListener('submit', performSearch);
 });
