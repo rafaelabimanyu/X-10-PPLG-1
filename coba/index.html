@@ -5,66 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Calibri&display=swap');
-
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .bg-image {
-            background-image: url('img/WhatsApp Image 2024-07-22 at 12.06.21.jpeg');
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .floating-text {
-            position: absolute;
-            bottom: 3%;
-            left: 50%;
-            transform: translate(-50%, -3%);
-            color: rgba(255, 255, 255, 0.9);
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .floating-text .title {
-            font-family: 'Calibri', sans-serif;
-            font-size: 2em;
-            color: #f8b195; /* Warna pastel lembut */
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Efek blur di luar font */
-            margin-bottom: 5px; /* Jarak antara baris */
-        }
-
-        .floating-text .subtitle {
-            font-family: 'Lobster', cursive;
-            font-size: 1.2em;
-            background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* Gradient warna pastel */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Efek blur di luar font */
-            margin-top: 5px; /* Jarak antara baris */
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="">
     <title>X PPLG 1</title>
 </head>
 <body>
+    <div class="navbar-custom">
+        <a href="#">Home</a>
+        <a href="#">About Class</a>
+        <a href="#">Other</a>
+    </div>
+
     <div class="bg-image"></div>
 
-    <div class="floating-text">
-        <p class="title">X PPLG 1</p>
-        <p class="subtitle">SMK PRESTASI PRIMA</p>
+    <div class="floating-text" id="floatingText">
+        <p class="title"><a href="#" style="text-decoration: none; color: #FFABAB;">X PPLG 1</a></p>
+        <p class="subtitle"><a href="#">SMK PRESTASI PRIMA</a></p>
     </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="src/js/index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

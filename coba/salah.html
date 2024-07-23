@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Calibri&display=swap');
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .bg-image {
+            background-image: url('img/WhatsApp Image 2024-07-22 at 12.06.21.jpeg');
+            height: 100vh; /* Menggunakan viewport height untuk memastikan gambar latar mengisi seluruh layar */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative; /* Menambahkan posisi relatif untuk child yang akan ditambahkan */
+        }
+
+        .floating-text {
+            position: absolute;
+            bottom: 3%;
+            left: 50%;
+            transform: translate(-50%, -3%);
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            font-weight: bold;
+            opacity: 0; /* Awalnya atur opacity menjadi 0 untuk animasi muncul */
+            transition: opacity 0.3s ease, transform 0.3s ease-out; /* Animasi transisi untuk opacity dan transform */
+            cursor: pointer; /* Menjadikan cursor menjadi pointer saat dihover */
+        }
+
+        .floating-text.active {
+            opacity: 1; /* Ketika aktif, atur opacity menjadi 1 */
+        }
+
+        .floating-text .title {
+            font-family: 'Baloo 2', cursive;
+            font-size: 2em;
+            color: #f8b195; /* Warna pastel lembut */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Efek blur di luar font */
+            margin-bottom: 5px; /* Jarak antara baris */
+            transition: color 0.3s ease; /* Animasi transisi untuk warna teks */
+        }
+
+        .floating-text .subtitle {
+            font-family: 'Lobster', cursive;
+            font-size: 1.2em;
+            background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* Gradient warna pastel */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Efek blur di luar font */
+            margin-top: 5px; /* Jarak antara baris */
+            transition: background 0.3s ease; /* Animasi transisi untuk warna latar belakang teks */
+        }
+
+        .floating-text:hover .title {
+            color: #FF7E67; /* Warna yang berbeda saat dihover */
+        }
+
+        .floating-text:hover .subtitle {
+            background: linear-gradient(to right, #FFD56D, #FF9A3E); /* Gradient warna yang berbeda saat dihover */ 
+        }
+
+        .floating-text:hover {
+            transform: translateY(-10px); /* Transformasi saat dihover */
+        }
+    </style>
+    <title>X PPLG 1</title>
+</head>
+<body>
+    <div class="bg-image"></div>
+
+    <div class="floating-text" id="floatingText">
+        <p class="title"><a href="#" style="text-decoration: none; color: #f8b195;">X PPLG 1</a></p>
+        <p class="subtitle"><a href="#">SMK PRESTASI PRIMA</a></p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Menggunakan JavaScript untuk mengaktifkan animasi
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingText = document.getElementById('floatingText');
+            floatingText.addEventListener('mouseenter', function() {
+                floatingText.classList.add('active');
+            });
+            floatingText.addEventListener('mouseleave', function() {
+                floatingText.classList.remove('active');
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
