@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>X PPLG 1</title>
+    <style>
+        .strikethrough {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- first navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-aos="fade-down">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">X PPLG 1</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About Class
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="description.html">Description</a></li>
+                      <li><a class="dropdown-item" href="classphoto.html">Class Photo</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="student.html">Class Students</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" id="searchForm">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        <!-- end navbar -->
+    </header>
+
+    <main>
+      <!-- first class description -->
+      <section class="container mt-4 mb-4" data-aos="fade-up">
+          <h1 class="text-center"><strong>WEBSITE X 10 PPLG 1</strong></h1>
+          <hr>
+          <div class="alert alert-dark text-center" role="alert">
+            <strong>SMK PRESTASI PRIMA JAKARTA</strong>
+          </div>
+      </section> 
+       <!-- end class description  -->
+    </main>
+
+    <main class="container mt-4">
+        <div class="alert alert-dark" role="alert">
+          <!-- Carousel -->
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/ramekelasfulldiri.jfif" class="d-block w-100" alt="Slide 1" data-aos="zoom-in">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/anakcewe.jfif" class="d-block w-100" alt="Slide 2" data-aos="zoom-in" data-aos-delay="100">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/fotokelas.jfif" class="d-block w-100" alt="Slide 3" data-aos="zoom-in" data-aos-delay="200">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </a>
+          </div>
+          <!-- End Carousel -->
+        </div>
+
+        <section class="mb-4" data-aos="fade-left">
+          <p class="text-center"><strong>Alamat Sekolah:</strong>
+          <span class="strikethrough">Jl. Hankam Raya No.89, RT.7/RW.4, Cilangkap, Kec. Cipayung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13870</span>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light mt-4 p-4">
+      <div class="container">
+          <h4>Kontak Kami</h4>
+          <form id="contactForm">
+              <div class="mb-3">
+                  <label for="name" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="name" name="to_name" required>
+              </div>
+              <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="to_email" required>
+              </div>
+              <div class="mb-3">
+                  <label for="message" class="form-label">Pesan</label>
+                  <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="sendEmail(event)">Kirim Pesan melalui Email</button>
+              <hr>
+              <button type="button" class="btn btn-success" onclick="sendWhatsApp(event)">Kirim Pesan melalui WhatsApp</button>
+          </form>
+      </div>
+  </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>    
+</html>
