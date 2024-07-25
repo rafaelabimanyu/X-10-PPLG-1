@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS (Animate On Scroll)
     AOS.init({
-        duration: 1200, // Duration of animations
-        once: true // Whether animations should only happen once or every time you scroll up/down
+        duration: 1200,
+        once: true 
     });
 
-    // EmailJS initialization
     emailjs.init("62TUU4V_IMDfBiQtz");
     console.log("EmailJS initialized");
 
-    // Email sending function
     window.sendEmail = function(event) {
         event.preventDefault();
         var form = document.getElementById('contactForm');
@@ -24,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     };
 
-    // WhatsApp sending function
     window.sendWhatsApp = function(event) {
         event.preventDefault();
         const name = document.getElementById('name').value;
@@ -46,13 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
         let found = false;
 
         allTextElements.forEach(element => {
-            if (element.childNodes.length === 1 && element.childNodes[0].nodeType === 3) { // check if the element has only one text node
+            if (element.childNodes.length === 1 && element.childNodes[0].nodeType === 3) { 
                 const text = element.textContent.toLowerCase();
                 if (text.includes(query)) {
-                    element.style.backgroundColor = "yellow"; // highlight the found text
+                    element.style.backgroundColor = "yellow"; 
                     found = true;
                 } else {
-                    element.style.backgroundColor = ""; // reset if not found
+                    element.style.backgroundColor = ""; 
                 }
             }
         });
@@ -63,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Matches found. Highlighted in yellow.');
         }
 
-        // Mapping of keywords to corresponding page URLs
         const keywordToUrl = {
             'home': 'home.html',
             'description': 'description.html',
