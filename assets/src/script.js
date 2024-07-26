@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (element.childNodes.length === 1 && element.childNodes[0].nodeType === 3) { 
                 const text = element.textContent.toLowerCase();
                 if (text.includes(query)) {
-                    element.style.backgroundColor = "yellow"; 
+                    element.style.backgroundColor = "grey"; 
                     found = true;
                 } else {
                     element.style.backgroundColor = ""; 
