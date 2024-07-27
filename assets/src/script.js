@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         if (!found) {
-            alert('No matches found.');
+            alert('Tidak ada kecocokan yang ditemukan.');
         } else {
-            alert('Matches found. Highlighted in yellow.');
+            alert('Kecocokan ditemukan. Ditandai dengan warna abu-abu.');
         }
 
         const keywordToUrl = {
