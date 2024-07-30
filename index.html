@@ -111,7 +111,7 @@ html {
     <header>
         <!-- first hedaer -->
         <nav>
-            <div class="navbar-custom">
+            <div class="navbar-custom" data-aos="fade-down">
                 <a href="assets/src/home.html">Home</a>
                 <a href="assets/src/home.html">About Class</a>
                 <div class="dropdown">
@@ -131,10 +131,10 @@ html {
 
     <main>
         <!-- image -->
-        <div class="bg-image"></div>
+        <div class="bg-image" data-aos="fade-in"></div>
         
         <!-- first content text -->
-        <div class="floating-text" id="floatingText">
+        <div class="floating-text" id="floatingText" data-aos="zoom-in">
             <p class="title"><a href="#" style="text-decoration: none; color: #FFABAB;">X (10) PPLG 1</a></p>
             <p class="subtitle"><a href="#">SMK PRESTASI PRIMA</a></p>
         </div>
@@ -147,14 +147,17 @@ html {
     <script src="assets/src/index.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-    const floatingText = document.getElementById('floatingText');
-    floatingText.addEventListener('mouseenter', function() {
-        floatingText.classList.add('active');
-    });
-    floatingText.addEventListener('mouseleave', function() {
-        floatingText.classList.remove('active');
-    });
-});
+            const floatingText = document.getElementById('floatingText');
+            floatingText.addEventListener('mouseenter', function() {
+                floatingText.classList.add('active');
+            });
+            floatingText.addEventListener('mouseleave', function() {
+                floatingText.classList.remove('active');
+            });
+
+            // Initialize AOS
+            AOS.init();
+        });
     </script>
     <!-- end scripts -->
 </body>
